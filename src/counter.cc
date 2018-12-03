@@ -17,9 +17,9 @@
 namespace benchmark {
 namespace internal {
 
-double Finish(Counter const& c, int64_t iterations, double cpu_time,
-              double num_threads) {
-  double v = c.value;
+long Finish(Counter const& c, int64_t iterations, long cpu_time,
+              long num_threads) {
+  long v = c.value;
   if (c.flags & Counter::kIsRate) {
     v /= cpu_time;
   }
